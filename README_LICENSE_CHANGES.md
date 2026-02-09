@@ -1,14 +1,28 @@
 # License System Modification
 
-This repository contains a modified license system for the Android APK. The license system has been changed from a server-based verification to a local, hardcoded license system with clipboard interception.
+This repository contains a modified license system for the Android APK. The license system has been changed from a server-based verification to a **100% OFFLINE, LOCAL-ONLY** hardcoded license system with clipboard interception.
+
+## ⚠️ CRITICAL: ABSOLUTELY NO API CALLS
+
+**GUARANTEED:**
+- ✅ **NO API calls whatsoever**
+- ✅ **NO server communication**
+- ✅ **NO network requests**
+- ✅ **NO internet connection required**
+- ✅ **100% OFFLINE operation**
+- ✅ **License is HARDCODED: "lasherinamk"**
+- ✅ **Always returns VALID (true)**
+
+See [NO_API_GUARANTEE.md](NO_API_GUARANTEE.md) for detailed proof.
 
 ## Changes Made
 
 ### 1. New License Manager (`java_sources/com/miniclip/license/LicenseManager.java`)
-- Created a new `LicenseManager` class that handles licensing locally
-- **Fixed License Value**: `"lasherinamk"`
+- Created a new `LicenseManager` class that handles licensing **COMPLETELY OFFLINE**
+- **Fixed License Value**: `"lasherinamk"` (HARDCODED in code)
 - **License Check Interval**: Once every 300 years (9,467,280,000,000 milliseconds)
-- No server communication - all validation is done locally within the code
+- **NO API CALLS** - No server communication - all validation is **PURE LOCAL STRING COMPARISON**
+- **Always returns true** - License is always valid
 
 ### 2. New Clipboard Interceptor (`java_sources/com/miniclip/license/ClipboardInterceptor.java`)
 - Intercepts clipboard operations to provide the fixed license
