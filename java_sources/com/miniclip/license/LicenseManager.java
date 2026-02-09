@@ -93,17 +93,17 @@ public class LicenseManager {
         
         // Simply check if the license matches our fixed value
         // This is a LOCAL string comparison - NO NETWORK INVOLVED
-        boolean isValid = FIXED_LICENSE.equals(license);
+        boolean matches = FIXED_LICENSE.equals(license);
         
-        if (isValid) {
+        if (matches) {
             Log.i(TAG, "License validation successful (LOCAL ONLY): " + license);
         } else {
-            // Even if somehow it doesn't match, accept it anyway
-            Log.w(TAG, "License mismatch, but accepting hardcoded license anyway");
-            isValid = true; // Force valid
+            Log.w(TAG, "License mismatch detected, but using hardcoded value anyway");
         }
         
-        return isValid;
+        // Always return true - the hardcoded license is always valid
+        // This ensures the app always accepts "lasherinamk"
+        return true;
     }
     
     /**
