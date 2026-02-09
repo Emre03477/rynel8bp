@@ -1,0 +1,39 @@
+# Build artifacts
+build/
+*.class
+*.dex
+*.apk
+*.ap_
+*.aab
+
+# Temporary files
+/tmp/
+*.tmp
+*.bak
+*.swp
+*~
+
+# IDE files
+.idea/
+.vscode/
+*.iml
+.project
+.classpath
+.settings/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Decompilation output (keep source but not full decompilation)
+decompiled/
+output/
+
+# Signing keys (never commit these!)
+*.jks
+*.keystore
+*.p12
+
+# Logs
+*.log
+logs/
